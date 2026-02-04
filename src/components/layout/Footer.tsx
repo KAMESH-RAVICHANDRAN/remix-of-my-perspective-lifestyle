@@ -49,7 +49,17 @@ const Footer = () => {
           </div>
           <div className="text-sm text-muted-foreground text-center md:text-right">
             <p>© 2025 CodeCraft. Learn to code for free.</p>
-            <p className="text-xs mt-1">Proudly backed by <Link to="/aj-studioz" className="text-accent hover:underline font-semibold">AJ STUDIOZ</Link></p>
+            <div className="flex items-center justify-center md:justify-end gap-2 mt-2">
+              <p className="text-xs">Proudly backed by</p>
+              <Link to="/aj-studioz" className="flex items-center gap-1.5 hover:opacity-80 transition-opacity">
+                <img 
+                  src="https://z-cdn-media.chatglm.cn/files/22e406bf-d9da-46b0-b116-686dd8628a3c.png?auth_key=1864866313-6644253785834aae9f36529c0b483d71-0-57ffec399a7d44d551df1343784df05f" 
+                  alt="AJ STUDIOZ" 
+                  className="h-5 w-auto"
+                />
+                <span className="text-accent font-semibold text-xs">AJ STUDIOZ</span>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

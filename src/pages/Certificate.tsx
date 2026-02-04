@@ -242,9 +242,17 @@ const Certificate = () => {
 
               {/* Footer */}
               <div className="pt-8 border-t border-border/50 mt-8">
-                <p className="text-xs text-muted-foreground">
-                  Backed by AJ STUDIOZ | Certificate ID: {course?.id.slice(0, 8).toUpperCase()}
-                </p>
+                <div className="flex items-center justify-center gap-2 flex-wrap">
+                  <p className="text-xs text-muted-foreground">Backed by</p>
+                  <img 
+                    src="https://z-cdn-media.chatglm.cn/files/22e406bf-d9da-46b0-b116-686dd8628a3c.png?auth_key=1864866313-6644253785834aae9f36529c0b483d71-0-57ffec399a7d44d551df1343784df05f" 
+                    alt="AJ STUDIOZ" 
+                    className="h-5 w-auto"
+                  />
+                  <span className="text-xs font-semibold text-accent">AJ STUDIOZ</span>
+                  <span className="text-xs text-muted-foreground mx-2">|</span>
+                  <span className="text-xs text-muted-foreground">Certificate ID: {course?.id.slice(0, 8).toUpperCase()}</span>
+                </div>
               </div>
             </div>
           </Card>

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CertificationCard from "@/components/courses/CertificationCard";
+import CertificateShowcase from "@/components/certificate/CertificateShowcase";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from "lucide-react";
 
@@ -75,6 +76,9 @@ const Certifications = () => {
             ))}
           </div>
         )}
+
+        {/* Certificate Showcase */}
+        <CertificateShowcase />
 
         {/* Info Section */}
         <section className="mt-20 rounded-[2rem] bg-card border border-border/50 p-8 md:p-12">

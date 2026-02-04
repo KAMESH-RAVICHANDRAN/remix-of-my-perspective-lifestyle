@@ -1,73 +1,179 @@
-# Welcome to your Lovable project
+<div align="center">
+  <img width="260" alt="AJStudiozLogo" src="https://z-cdn-media.chatglm.cn/files/22e406bf-d9da-46b0-b116-686dd8628a3c.png?auth_key=1864866313-6644253785834aae9f36529c0b483d71-0-57ffec399a7d44d551df1343784df05f" />
+</div>
 
-## Project info
+<h1 align="center">CodeCraft - Learn to Code</h1>
 
-**URL**: https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2
+<p align="center">
+  <strong>Free Interactive Coding Education Platform</strong><br>
+  Powered by AJ STUDIOZ
+</p>
 
-## How can I edit this code?
+<p align="center">
+  <a href="https://www.ajstudioz.co.in">
+    <img src="https://img.shields.io/badge/Developed%20by-AJ%20STUDIOZ-blue?style=for-the-badge" alt="AJ STUDIOZ">
+  </a>
+  <a href="https://www.ajstudioz.co.in">
+    <img src="https://img.shields.io/badge/Visit-ajstudioz.co.in-green?style=for-the-badge" alt="Website">
+  </a>
+</p>
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🎓 About CodeCraft
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2) and start prompting.
+CodeCraft is a comprehensive online learning platform designed to make coding education accessible to everyone. This intelligent platform features interactive lessons, real-time code challenges, and personalized learning paths. Master HTML, CSS, and JavaScript through hands-on practice and earn certificates to showcase your achievements.
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## ✨ Features
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **📚 Structured Courses:** Complete learning paths for HTML, CSS, and JavaScript
+- **💻 Interactive Challenges:** freeCodeCamp-style coding exercises with hints and solutions
+- **🎯 Progress Tracking:** Track your learning journey with detailed progress metrics
+- **🏆 Certifications:** Earn beautiful certificates upon course completion
+- **🔐 Authentication:** Secure user authentication and personalized dashboards
+- **🎨 Modern UI:** Beautiful, responsive design with dark mode support
+- **📱 Mobile Friendly:** Learn on any device with fully responsive layouts
+- **✍️ Code Editor:** In-browser code editor with real-time execution
+- **💡 Smart Hints:** Progressive hint system to guide your learning
+- **👥 User Profiles:** Personalized learning experience with progress persistence
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 🚀 Run Locally
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm or yarn package manager
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Setup Instructions
 
-# Step 3: Install the necessary dependencies.
-npm i
+1. **Clone the repository:**
+```bash
+git clone https://github.com/KAMESH-RAVICHANDRAN/remix-of-my-perspective-lifestyle.git
+cd remix-of-my-perspective-lifestyle
+```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. **Install dependencies:**
+```bash
+npm install
+```
+
+3. **Set up environment variables:**
+   - Copy `.env.example` to `.env.local`
+   - Configure Supabase credentials in your `.env.local` file:
+```env
+VITE_SUPABASE_URL=your_supabase_url_here
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key_here
+```
+
+4. **Run the development server:**
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+5. **Open your browser:**
+   Navigate to `http://localhost:5173` to see the application running.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+6. **Build for production:**
+```bash
+npm run build
+npm run preview
+```
 
-**Use GitHub Codespaces**
+---
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🏗️ Tech Stack
 
-## What technologies are used for this project?
+- **Frontend:** React 19 with TypeScript
+- **Build Tool:** Vite
+- **Routing:** React Router DOM
+- **UI Framework:** shadcn-ui components
+- **Styling:** Tailwind CSS with custom animations
+- **Backend:** Supabase (Authentication & Database)
+- **Icons:** Lucide React
+- **Markdown:** React Markdown for lesson content
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📖 Key Features Explained
 
-## How can I deploy this project?
+### Interactive Code Challenges
+Every lesson includes hands-on coding challenges inspired by freeCodeCamp:
+- Live code editor with syntax highlighting
+- Instant code execution and testing
+- Progressive hint system
+- Solution walkthrough
+- Automatic progress tracking
 
-Simply open [Lovable](https://lovable.dev/projects/7410f81b-8218-4f2d-bb32-1ba1f84eabb2) and click on Share -> Publish.
+### Certificate System
+Complete courses to earn professional certificates featuring:
+- Personalized with your name and completion date
+- Unique certificate ID for verification
+- Downloadable and shareable
+- Professional design suitable for portfolios and LinkedIn
 
-## Can I connect a custom domain to my Lovable project?
+### Learning Path
+Structured curriculum covering:
+- **HTML Basics:** Elements, attributes, semantic markup
+- **CSS Fundamentals:** Styling, layouts, responsive design
+- **JavaScript Essentials:** Variables, functions, DOM manipulation
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## <img src="https://z-cdn-media.chatglm.cn/files/22e406bf-d9da-46b0-b116-686dd8628a3c.png?auth_key=1864866313-6644253785834aae9f36529c0b483d71-0-57ffec399a7d44d551df1343784df05f" width="30" height="30" /> About AJ STUDIOZ
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**AJ STUDIOZ** is a pioneering technology company specializing in AI-driven solutions and digital innovation. With a focus on creating impactful applications that solve real-world problems, AJ STUDIOZ combines cutting-edge artificial intelligence with user-centric design.
+
+### Our Mission
+To democratize technology and make advanced learning solutions accessible to everyone, fostering innovation and skill development through interactive, engaging educational platforms.
+
+### Connect With Us
+- **Website:** [www.ajstudioz.co.in](https://www.ajstudioz.co.in)
+- **Portfolio:** Explore our innovative projects and solutions
+- **Services:** Custom AI development, Web applications, Mobile apps, and Digital transformation
+
+---
+
+## <img src="https://z-cdn-media.chatglm.cn/files/22e406bf-d9da-46b0-b116-686dd8628a3c.png?auth_key=1864866313-6644253785834aae9f36529c0b483d71-0-57ffec399a7d44d551df1343784df05f" width="30" height="30" /> Powered by AJ STUDIOZ Innovation
+
+This project represents the commitment of **AJ STUDIOZ** to educational excellence and technological innovation. Our platform features:
+
+- Intelligent learning paths and personalized recommendations
+- Advanced progress tracking and analytics
+- Interactive code execution environment
+- Smart hint systems for enhanced learning
+- Beautiful certificate generation system
+
+The technology stack demonstrates our commitment to building scalable, engaging solutions that create tangible value for learners worldwide.
+
+---
+
+## 📄 License
+
+This project is developed and maintained by AJ STUDIOZ. All rights reserved.
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! If you'd like to contribute to CodeCraft or collaborate with AJ STUDIOZ, please visit our website or reach out to our team.
+
+---
+
+## 📞 Support
+
+For technical support or inquiries:
+- Visit: [www.ajstudioz.co.in](https://www.ajstudioz.co.in)
+- Email: Contact through website
+- Create an issue in this repository
+
+---
+
+<div align="center">
+  <img src="https://z-cdn-media.chatglm.cn/files/22e406bf-d9da-46b0-b116-686dd8628a3c.png?auth_key=1864866313-6644253785834aae9f36529c0b483d71-0-57ffec399a7d44d551df1343784df05f" width="50" height="50" />
+  <p><strong>Built with ❤️ by AJ STUDIOZ</strong></p>
+  <p>Empowering Learning Through Technology</p>
+</div>
+
