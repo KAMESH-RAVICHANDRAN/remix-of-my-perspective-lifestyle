@@ -1,103 +1,178 @@
-import Header from "@/components/Header";
-import ArticleCard from "@/components/ArticleCard";
-import HeroSection from "@/components/HeroSection";
-import IntroSection from "@/components/IntroSection";
-import { articles } from "@/data/articles";
+import { Link } from "react-router-dom";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Code, Palette, Zap, Award, Users, BookOpen } from "lucide-react";
 
 const Index = () => {
-  const featuredArticles = articles.slice(0, 6);
-
   return (
     <div className="min-h-screen bg-background animate-fade-in">
       <Header />
       
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main>
         {/* Hero Section */}
-        <HeroSection />
-
-        {/* Intro Section */}
-        <IntroSection />
-
-        {/* Featured Articles Grid */}
-        <section id="articles" className="py-12">
-          <div className="flex items-center justify-between mb-12 animate-slide-up">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Articles</h2>
-            <a href="#all" className="text-sm font-medium text-muted-foreground hover:text-accent transition-colors px-4 py-2 rounded-full hover:bg-muted/60">
-              View all →
-            </a>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredArticles.map((article, index) => (
-              <div key={article.id} className={`animate-slide-up stagger-${Math.min(index + 1, 6)}`}>
-                <ArticleCard {...article} size="small" />
-              </div>
-            ))}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+          <div className="text-center space-y-8 max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-muted text-sm font-medium animate-slide-down">
+              <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+              Free, beginner-friendly coding education
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-serif leading-tight animate-slide-up">
+              Learn to code.
+              <br />
+              <span className="text-accent">Build anything.</span>
+            </h1>
+            
+            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-slide-up stagger-1">
+              Master HTML, CSS, and JavaScript from scratch with interactive lessons, 
+              hands-on projects, and earn certificates to prove your skills.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up stagger-2">
+              <Button asChild size="lg" className="rounded-full px-8 h-14 text-base">
+                <Link to="/courses">
+                  Start Learning Free
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" size="lg" className="rounded-full px-8 h-14 text-base">
+                <Link to="/certifications">View Certifications</Link>
+              </Button>
+            </div>
           </div>
         </section>
 
-        {/* Newsletter Section */}
-        <section className="my-20 rounded-[2.5rem] bg-card p-12 md:p-16 text-center animate-scale-in">
-          <div className="max-w-2xl mx-auto space-y-8">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Stay inspired.</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Subscribe to receive our latest articles and insights directly in your inbox.
+        {/* Learning Path */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold font-serif mb-4">Your learning path</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Go from complete beginner to confident developer with our structured curriculum
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="flex-1 px-6 py-4 rounded-full border border-input bg-background focus:outline-none focus:ring-2 focus:ring-ring transition-all"
-              />
-              <button className="px-10 py-4 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 hover:scale-105 transition-all">
-                Subscribe
-              </button>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* HTML */}
+            <div className="bg-card rounded-3xl p-8 border border-border/50 card-hover animate-slide-up stagger-1">
+              <div className="w-16 h-16 rounded-2xl bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center mb-6">
+                <Code className="w-8 h-8 text-orange-600 dark:text-orange-400" />
+              </div>
+              <div className="text-sm font-medium text-muted-foreground mb-2">Step 1</div>
+              <h3 className="text-2xl font-bold mb-3">HTML</h3>
+              <p className="text-muted-foreground mb-6">
+                Learn the foundation of every website. Structure your content with semantic HTML elements.
+              </p>
+              <Link 
+                to="/courses?category=html" 
+                className="inline-flex items-center text-accent font-medium hover:underline"
+              >
+                Start with HTML
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
             </div>
+
+            {/* CSS */}
+            <div className="bg-card rounded-3xl p-8 border border-border/50 card-hover animate-slide-up stagger-2">
+              <div className="w-16 h-16 rounded-2xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center mb-6">
+                <Palette className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              </div>
+              <div className="text-sm font-medium text-muted-foreground mb-2">Step 2</div>
+              <h3 className="text-2xl font-bold mb-3">CSS</h3>
+              <p className="text-muted-foreground mb-6">
+                Style and design beautiful websites. Master layouts, animations, and responsive design.
+              </p>
+              <Link 
+                to="/courses?category=css" 
+                className="inline-flex items-center text-accent font-medium hover:underline"
+              >
+                Learn CSS
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+
+            {/* JavaScript */}
+            <div className="bg-card rounded-3xl p-8 border border-border/50 card-hover animate-slide-up stagger-3">
+              <div className="w-16 h-16 rounded-2xl bg-yellow-100 dark:bg-yellow-900/30 flex items-center justify-center mb-6">
+                <Zap className="w-8 h-8 text-yellow-600 dark:text-yellow-400" />
+              </div>
+              <div className="text-sm font-medium text-muted-foreground mb-2">Step 3</div>
+              <h3 className="text-2xl font-bold mb-3">JavaScript</h3>
+              <p className="text-muted-foreground mb-6">
+                Add interactivity and logic. Build dynamic web applications and master programming.
+              </p>
+              <Link 
+                to="/courses?category=javascript" 
+                className="inline-flex items-center text-accent font-medium hover:underline"
+              >
+                Explore JavaScript
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Features */}
+        <section className="bg-card border-y border-border">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="grid md:grid-cols-3 gap-12">
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <BookOpen className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">12+ Free Courses</h3>
+                <p className="text-muted-foreground">
+                  Comprehensive curriculum covering everything from basics to advanced topics
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <Award className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Earn Certificates</h3>
+                <p className="text-muted-foreground">
+                  Complete courses and earn verified certificates to showcase your skills
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-bold mb-2">Learn Together</h3>
+                <p className="text-muted-foreground">
+                  Join thousands of learners on their coding journey
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="rounded-[2.5rem] bg-primary text-primary-foreground p-12 md:p-16 text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-serif mb-6">
+              Ready to start coding?
+            </h2>
+            <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
+              Join CodeCraft today and begin your journey to becoming a web developer. 
+              It's completely free to get started.
+            </p>
+            <Button 
+              asChild 
+              size="lg" 
+              variant="secondary" 
+              className="rounded-full px-10 h-14 text-base font-medium"
+            >
+              <Link to="/auth">
+                Create Free Account
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Link>
+            </Button>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <h3 className="font-semibold mb-4">Explore</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/wellness" className="hover:text-accent transition-colors">Wellness</a></li>
-                <li><a href="/travel" className="hover:text-accent transition-colors">Travel</a></li>
-                <li><a href="/creativity" className="hover:text-accent transition-colors">Creativity</a></li>
-                <li><a href="/growth" className="hover:text-accent transition-colors">Growth</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">About</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/about" className="hover:text-accent transition-colors">Our Story</a></li>
-                <li><a href="/authors" className="hover:text-accent transition-colors">Authors</a></li>
-                <li><a href="/contact" className="hover:text-accent transition-colors">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/style-guide" className="hover:text-accent transition-colors">Style Guide</a></li>
-                <li><a href="/#newsletter" className="hover:text-accent transition-colors">Newsletter</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold mb-4">Legal</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/privacy" className="hover:text-accent transition-colors">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-accent transition-colors">Terms of Service</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="pt-8 border-t border-border text-center text-sm text-muted-foreground">
-            <p>© 2025 Perspective. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
