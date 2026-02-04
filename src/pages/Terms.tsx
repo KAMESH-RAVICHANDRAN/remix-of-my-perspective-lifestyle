@@ -1,133 +1,100 @@
-import Header from "@/components/Header";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 const Terms = () => {
   return (
     <div className="min-h-screen bg-background animate-fade-in">
       <Header />
       
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div className="mb-12 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight animate-slide-down">
-            Terms of Service
-          </h1>
-          <p className="text-muted-foreground animate-slide-up stagger-1">
-            Last updated: March 20, 2025
+      <main className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <h1 className="text-4xl font-bold font-serif mb-8 animate-slide-down">Terms of Service</h1>
+        
+        <div className="prose dark:prose-invert max-w-none space-y-8 animate-slide-up stagger-1">
+          <p className="text-lg text-muted-foreground">
+            Last updated: January 2025
           </p>
-        </div>
 
-        <div className="prose prose-lg max-w-none space-y-8">
           <section>
-            <h2 className="text-2xl font-bold mb-4">Agreement to Terms</h2>
-            <p className="text-muted-foreground">
-              By accessing or using Perspective's website and services, you agree to be bound by these Terms of Service. 
-              If you disagree with any part of these terms, you may not access our services.
+            <h2 className="text-2xl font-bold font-serif mb-4">1. Acceptance of Terms</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              By accessing and using CodeCraft, you agree to be bound by these Terms of Service. 
+              If you do not agree to these terms, please do not use our platform.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Use License</h2>
-            <p className="text-muted-foreground mb-4">
-              Permission is granted to temporarily access the materials on Perspective's website for personal, 
-              non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+            <h2 className="text-2xl font-bold font-serif mb-4">2. Use of Service</h2>
+            <p className="text-muted-foreground leading-relaxed mb-4">
+              CodeCraft provides free online coding education. You may use our services for personal, 
+              non-commercial learning purposes. You agree not to:
             </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>Modify or copy the materials</li>
-              <li>Use the materials for any commercial purpose or public display</li>
-              <li>Attempt to decompile or reverse engineer any software on our website</li>
-              <li>Remove any copyright or proprietary notations from the materials</li>
-              <li>Transfer the materials to another person or mirror on any other server</li>
+            <ul className="list-disc list-inside text-muted-foreground space-y-2">
+              <li>Share your account credentials with others</li>
+              <li>Attempt to access other users' accounts</li>
+              <li>Reproduce or redistribute our course content without permission</li>
+              <li>Use automated tools to scrape or collect content</li>
+              <li>Engage in any activity that disrupts our services</li>
             </ul>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">User Content</h2>
-            <p className="text-muted-foreground">
-              When you post comments or other content on our website, you grant us a non-exclusive, worldwide, 
-              royalty-free license to use, reproduce, and display such content. You represent that you own or 
-              have the necessary rights to the content you post.
+            <h2 className="text-2xl font-bold font-serif mb-4">3. Account Registration</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              To access certain features, you must create an account. You are responsible for 
+              maintaining the confidentiality of your account and password. You agree to provide 
+              accurate and complete information during registration.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Prohibited Uses</h2>
-            <p className="text-muted-foreground mb-4">
-              You may not use our website:
-            </p>
-            <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-              <li>In any way that violates any applicable law or regulation</li>
-              <li>To transmit any harmful or malicious code</li>
-              <li>To impersonate or attempt to impersonate Perspective or any employee</li>
-              <li>To harass, abuse, or harm another person</li>
-              <li>To spam or send unsolicited communications</li>
-            </ul>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Intellectual Property</h2>
-            <p className="text-muted-foreground">
-              All content on Perspective, including articles, images, logos, and designs, is the property of 
-              Perspective or its content creators and is protected by international copyright laws. 
-              Unauthorized use of our content may violate copyright, trademark, and other laws.
+            <h2 className="text-2xl font-bold font-serif mb-4">4. Intellectual Property</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              All content on CodeCraft, including courses, lessons, and certificates, is protected 
+              by copyright and other intellectual property laws. You may not copy, modify, or 
+              distribute our content without explicit permission.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Disclaimer</h2>
-            <p className="text-muted-foreground">
-              The materials on Perspective's website are provided on an "as is" basis. Perspective makes no 
-              warranties, expressed or implied, and hereby disclaims and negates all other warranties including, 
-              without limitation, implied warranties or conditions of merchantability, fitness for a particular 
-              purpose, or non-infringement of intellectual property.
+            <h2 className="text-2xl font-bold font-serif mb-4">5. Certifications</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Certifications are issued based on completion of required courses. We reserve the 
+              right to revoke certifications if we determine they were obtained through fraudulent 
+              means or violation of these terms.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Limitations of Liability</h2>
-            <p className="text-muted-foreground">
-              In no event shall Perspective or its suppliers be liable for any damages (including, without 
-              limitation, damages for loss of data or profit, or due to business interruption) arising out of 
-              the use or inability to use the materials on Perspective's website.
+            <h2 className="text-2xl font-bold font-serif mb-4">6. Disclaimer</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              CodeCraft is provided "as is" without warranties of any kind. While we strive to 
+              provide accurate and up-to-date content, we make no guarantees about the completeness 
+              or accuracy of our materials.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Links to Other Websites</h2>
-            <p className="text-muted-foreground">
-              Our website may contain links to third-party websites that are not owned or controlled by Perspective. 
-              We have no control over and assume no responsibility for the content, privacy policies, or practices 
-              of any third-party websites.
+            <h2 className="text-2xl font-bold font-serif mb-4">7. Changes to Terms</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              We may update these terms from time to time. We will notify users of significant 
+              changes via email or through our platform. Continued use of our services after 
+              changes constitutes acceptance of the new terms.
             </p>
           </section>
 
           <section>
-            <h2 className="text-2xl font-bold mb-4">Modifications</h2>
-            <p className="text-muted-foreground">
-              Perspective may revise these Terms of Service at any time without notice. By using this website, 
-              you are agreeing to be bound by the current version of these Terms of Service.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Governing Law</h2>
-            <p className="text-muted-foreground">
-              These terms shall be governed by and construed in accordance with the laws of the State of California, 
-              without regard to its conflict of law provisions.
-            </p>
-          </section>
-
-          <section>
-            <h2 className="text-2xl font-bold mb-4">Contact Information</h2>
-            <p className="text-muted-foreground">
-              If you have any questions about these Terms of Service, please contact us at:
-            </p>
-            <p className="text-muted-foreground mt-4">
-              Email: legal@perspective.blog<br />
-              Address: San Francisco, CA
+            <h2 className="text-2xl font-bold font-serif mb-4">8. Contact</h2>
+            <p className="text-muted-foreground leading-relaxed">
+              For questions about these Terms of Service, please contact us at{" "}
+              <a href="mailto:legal@codecraft.dev" className="text-accent hover:underline">
+                legal@codecraft.dev
+              </a>
             </p>
           </section>
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 };
