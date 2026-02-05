@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Card, CardHeader, CardBody } from "@heroui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -143,64 +143,64 @@ const Projects = () => {
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project) => (
-              <Card key={project.id} className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <CardHeader className="p-0 relative overflow-hidden">
-                  <div className="relative h-48 overflow-hidden">
-                    <img
-                      alt={project.title}
-                      className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
-                      src={project.image}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <div className="absolute top-3 right-3">
-                      <Badge className="bg-primary/90 backdrop-blur-sm">
-                        {project.category}
-                      </Badge>
-                    </div>
+              <Card key={project.id} className="group overflow-hidden border-2 hover:border-primary/50 hover:shadow-2xl transition-all duration-300 bg-card">
+                <div className="relative h-48 overflow-hidden bg-muted">
+                  <img
+                    alt={project.title}
+                    className="object-cover w-full h-full group-hover:scale-110 transition-transform duration-500"
+                    src={project.image}
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300"></div>
+                  <div className="absolute top-3 right-3 z-10">
+                    <Badge className="bg-primary/90 backdrop-blur-sm shadow-lg">
+                      {project.category}
+                    </Badge>
                   </div>
+                </div>
+                
+                <CardHeader className="pb-3">
+                  <CardTitle className="text-xl group-hover:text-primary transition-colors line-clamp-1">
+                    {project.title}
+                  </CardTitle>
+                  <CardDescription className="line-clamp-2">
+                    {project.description}
+                  </CardDescription>
                 </CardHeader>
-                <CardBody className="p-6">
-                  <div className="mb-3">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
-                      {project.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground line-clamp-2">
-                      {project.description}
-                    </p>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
+                
+                <CardContent className="pb-3">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, index) => (
                       <Badge key={index} variant="secondary" className="text-xs">
                         {tag}
                       </Badge>
                     ))}
                   </div>
+                </CardContent>
 
-                  <div className="flex gap-2">
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      className="flex-1"
-                      asChild
-                    >
-                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </a>
-                    </Button>
-                    <Button
-                      size="sm"
-                      className="flex-1"
-                      asChild
-                    >
-                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Demo
-                      </a>
-                    </Button>
-                  </div>
-                </CardBody>
+                <CardFooter className="pt-0 gap-2">
+                  <Button
+                    size="sm"
+                    variant="outline"
+                    className="flex-1"
+                    asChild
+                  >
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      Code
+                    </a>
+                  </Button>
+                  <Button
+                    size="sm"
+                    className="flex-1"
+                    asChild
+                  >
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Demo
+                    </a>
+                  </Button>
+                </CardFooter>
               </Card>
             ))}
           </div>
