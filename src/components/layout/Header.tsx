@@ -86,6 +86,14 @@ const Header = () => {
               </Link>
             )}
             <Link 
+              to="/git-github" 
+              className={`text-sm font-medium rounded-full px-4 py-2 transition-all ${
+                isActive('/git-github') ? 'bg-muted' : 'hover:bg-muted/60'
+              }`}
+            >
+              Git & GitHub
+            </Link>
+            <Link 
               to="/about" 
               className={`text-sm font-medium rounded-full px-4 py-2 transition-all ${
                 isActive('/about') ? 'bg-muted' : 'hover:bg-muted/60'
@@ -187,6 +195,13 @@ const Header = () => {
                   Dashboard
                 </Link>
               )}
+              <Link 
+                to="/git-github" 
+                className="text-sm font-medium hover:bg-muted/60 rounded-lg px-4 py-3 transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Git & GitHub
+              </Link>
               <Link 
                 to="/about" 
                 className="text-sm font-medium hover:bg-muted/60 rounded-lg px-4 py-3 transition-all"
