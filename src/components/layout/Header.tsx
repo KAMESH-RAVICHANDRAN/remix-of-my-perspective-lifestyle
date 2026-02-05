@@ -94,6 +94,14 @@ const Header = () => {
               Git & GitHub
             </Link>
             <Link 
+              to="/github-education" 
+              className={`text-sm font-medium rounded-full px-4 py-2 transition-all ${
+                isActive('/github-education') ? 'bg-muted' : 'hover:bg-muted/60'
+              }`}
+            >
+              GitHub Education
+            </Link>
+            <Link 
               to="/about" 
               className={`text-sm font-medium rounded-full px-4 py-2 transition-all ${
                 isActive('/about') ? 'bg-muted' : 'hover:bg-muted/60'
@@ -201,6 +209,13 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Git & GitHub
+              </Link>
+              <Link 
+                to="/github-education" 
+                className="text-sm font-medium hover:bg-muted/60 rounded-lg px-4 py-3 transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                GitHub Education
               </Link>
               <Link 
                 to="/about" 

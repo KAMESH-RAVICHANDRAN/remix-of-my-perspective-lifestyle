@@ -19,6 +19,7 @@ import Terms from "./pages/Terms";
 import NotFound from "./pages/NotFound";
 import Certificate from "./pages/Certificate";
 import GitGithubDocs from "./pages/GitGithubDocs";
+import GithubEducation from "./pages/GithubEducation";
 
 const queryClient = new QueryClient();
 
@@ -44,6 +45,7 @@ const App = () => (
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/git-github" element={<GitGithubDocs />} />
+            <Route path="/github-education" element={<GithubEducation />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
